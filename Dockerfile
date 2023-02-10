@@ -18,7 +18,7 @@ RUN apt-get update \
 
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y nodejs
-RUN apt-get install ruby
+RUN apt-get install -y ruby
 
 COPY entrypoint.sh /entrypoint.sh
 
