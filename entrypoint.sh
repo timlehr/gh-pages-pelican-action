@@ -18,6 +18,9 @@ if [ -n "$PELICAN_THEME_FOLDER" ]; then
     popd
 fi
 
+echo 'Installing Ruby requirements'
+gem install sass -v 3.4.25
+
 echo 'Building site 👷 '
 pelican ${PELICAN_CONTENT_FOLDER:=content} -o output -s ${PELICAN_CONFIG_FILE:=pelicanconf.py}
 
